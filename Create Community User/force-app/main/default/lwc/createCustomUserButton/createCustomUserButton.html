@@ -1,9 +1,9 @@
 <template>
         <lightning-card title = "Create User and Permission Set" icon-name = "standard:contact">
-                <div class=”slds-m-around_medium”>
+                <div class = ”slds-m-around_medium”>
                         <lightning-record-edit-form record-id = {recordId}
                                                     object-api-name = {objectApiName}
-                                                    onsuccess={handleSuccess}>
+                                                    onsuccess = {handleSuccess}>
 
                                 <div class = "slds-form-element slds-form-element_horizontal">
                                         <lightning-input-field field-name = "email_opt_in__c" 
@@ -12,7 +12,7 @@
                                 </div>
                 
                                 <div flexibility = "auto" padding = "horizontal-small" class = "slds-clearfix">
-                                        <lightning-button variant="brand" 
+                                        <lightning-button variant = "brand" 
                                                           onclick = {handle} 
                                                           class = "slds-m-left_x-small slds-float_right" 
                                                           style = "padding-right: 23px; padding-top: 5px;"
