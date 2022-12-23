@@ -1,0 +1,12 @@
+<template>
+    <lightning-quick-action-panel header="Edit Fields Action">
+        <lightning-record-edit-form record-id={recordId}
+                                    object-api-name={objectApiName}
+                                    onsuccess={handleSuccess}>
+            <lightning-input-field field-name="email_opt_in__c"></lightning-input-field>
+            
+            <lightning-button variant="brand" onclick={handle} class="slds-m-left_x-small" label="Save" type="submit"></lightning-button>
+        </lightning-record-edit-form>
+    </lightning-quick-action-panel>
+
+    </template>
