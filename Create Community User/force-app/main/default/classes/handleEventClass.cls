@@ -31,7 +31,7 @@ public with sharing class handleEventClass
         Contact contact=[SELECT ID, FirstName, LastName, Email FROM Contact WHERE Id = :recordId];
      
         //creating user for contact
-        User userCreate =new User(UserName = contact.Email+ System.now().millisecond(),
+        User userCreate =new User(UserName = contact.Email + System.now().millisecond(),
                                   FirstName = contact.FirstName,
                                   LastName = contact.LastName,
                                   Alias = 'test123',
@@ -39,14 +39,14 @@ public with sharing class handleEventClass
                                   ContactId = contact.Id,
                                   ProfileId = profile.Id,
                                   EmailEncodingKey = 'UTF-8',
-                                  CommunityNickname = 'test123'+System.now().millisecond(),
+                                  CommunityNickname = 'test123' + System.now().millisecond(),
                                   TimeZoneSidKey = 'America/Los_Angeles',
                                   LocaleSidKey = 'en_US',
                                   LanguageLocaleKey = 'en_US');
         try
         {
             INSERT userCreate;
-            setPermission(userCreate.FirstName + ' ' +userCreate.LastName);
+            setPermission(userCreate.FirstName + ' ' + userCreate.LastName);
             return userCreate;
         }catch (Exception e)
         {
